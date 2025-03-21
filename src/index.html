@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Bree+Serif&family=Orbitron:wght@400..900&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class="upper-block">
+      <div class="content">
+        <div class="header-image-container">
+          <img class="astro-image" src="../Images/pic2-flip-removebg-preview.png" alt="astronaut-image">
+          <div class="middle-header-content">
+            <img class="header-image" src="../Images/horizontal_on_transparent_by_logaster.png" alt="cyb-image">
+            <p class="resource-management">Resource Management</p>
+          </div>        
+           <img class="astro-image" src="../Images/pic2.webp" alt="astronaut-image">
+        </div>
+
+      
+
+        <div class="details">
+          <div class="upper-para">
+            Employee data needs to be migrated from a legacy thick client HR app as well as an internal HR onboarding API into the organizations new HR system of record - CYB Resource Management. Download the legacy thick client app and make note of the API details listed below. For each of employee ID provided on this challenge page in the Employee Data section below, fill in all related employee details by looking up the employee in both systems of record. Enter the details for 10 emplyoees to complete the challenge.
+          </div>
+
+         <div class="lower-para">
+         <div class="lower-left-para">
+            <div class="heading-para">
+              Thick Client Legacy App
+            </div>
+            <p>
+              This legacy app has MOST but not all employee details. Download and search by employee ID for employee information. 
+            </p>
+         </div>
+         
+         <div class="lower-right-para">
+            <div class="heading-para">
+              HR Onboarding API
+            </div>
+            <p>Employee start date and phone number details can be found in the HR Onboarding API. To query the API for a specific employee, the format of the call is https://botgames-employee-data-migration-vwsrh7tyda-uc.a.run.app/employees?id='employeeID' where employee is the actual employee ID number.
+            </p>
+            <div class="note-para">
+              <span class="note">Note:</span> Make this call without the single quotes shown in the example.
+            </div>
+         </div>
+        </div>
+       </div>
+        
+
+        <button class="download-button">
+          <a class="download-app-link" href="./files/LegacyApp-1.0.0-arm64.dmg"  download="./files/LegacyApp-1.0.0-arm64.dmg"   target="_blank" rel="noopener noreferrer">Download Legacy App</a>
+        </button>
+        
+        
+
+      </div>
+    </div>
+
+
+    <div class="lower-block">
+      <div class="content">
+        
+        <div class="info">
+          <h1>Employee Data Migration</h1>
+            <p>Please fill in the employee details as required for each of the provided employee IDs. New ID provided after form submit.
+            </p>
+        </div>
+        
+        <form>
+        
+          <div class="single-input input-container">
+            <label for="employee-id">Employee ID</label>
+            <input type="text" id="employee-id" readonly>
+          </div>
+
+          <div class="double-input ">
+            <div class="input-container">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name">
+            </div>
+            <div class="input-container">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name">
+            </div>
+          </div>
+
+          <div class="double-input ">
+            <div class="input-container">
+              <label for="phone-number">Phone Number</label>
+              <input type="text" id="phone-number">
+            </div>
+            <div class="input-container">
+              <label for="email-address">Email Address</label>
+              <input type="text" id="email-address">
+            </div>
+          </div>
+
+          <div class="triple-input ">
+            <div class="input-container">
+              <label for="city">City</label>
+              <input type="text" id="city">
+            </div>
+            <div class="input-container">
+              <label for="state-dropdown">State</label>
+             <select name="" id="dropdown">
+              <option value="select">State</option>
+            <option value="al">AL</option>
+            <option value="ak">AK</option>
+            <option value="ar">AR</option>
+            <option value="az">AZ</option>
+            <option value="ca">CA</option>
+            <option value="co">CO</option>
+            <option value="ct">CT</option>
+            <option value="dc">DC</option>
+            <option value="de">DE</option>
+            <option value="fl">FL</option>
+            <option value="ga">GA</option>
+            <option value="hi">HI</option>
+            <option value="ia">IA</option>
+            <option value="id">ID</option>
+            <option value="il">IL</option>
+            <option value="in">IN</option>
+            <option value="ks">KS</option>
+            <option value="ky">KY</option>
+            <option value="la">LA</option>
+            <option value="ma">MA</option>
+            <option value="md">MD</option>
+            <option value="me">ME</option>
+            <option value="mi">MI</option>
+            <option value="mn">MN</option>
+            <option value="mo">MO</option>
+            <option value="ms">MS</option>
+            <option value="mt">MT</option>
+            <option value="nc">NC</option>
+            <option value="ne">NE</option>
+            <option value="nh">NH</option>
+            <option value="nj">NJ</option>
+            <option value="nm">NM</option>
+            <option value="nv">NV</option>
+            <option value="ny">NY</option>
+            <option value="nd">ND</option>
+            <option value="oh">OH</option>
+            <option value="ok">OK</option>
+            <option value="or">OR</option>
+            <option value="pa">PA</option>
+            <option value="ri">RI</option>
+            <option value="sc">SC</option>
+            <option value="sd">SD</option>
+            <option value="tn">TN</option>
+            <option value="tx">TX</option>
+            <option value="ut">UT</option>
+            <option value="vt">VT</option>
+            <option value="va">VA</option>
+            <option value="wa">WA</option>
+            <option value="wi">WI</option>
+            <option value="wv">WV</option>
+            <option value="wy">WY</option>
+             </select>
+            </div>
+            <div class="input-container">
+              <label for="zip">Zip</label>
+              <input type="text" id="zip" placeholder="Zip">
+            </div>
+          </div>
+
+          <div class="double-input ">
+            <div class="input-container">
+              <label for="job-title">Job Title</label>
+              <input type="text" id="job-title">
+            </div>
+            <div class="input-container">
+              <label for="department">Department</label>
+              <select name="" id="dropdown" class="department">
+                <option value="department">Department</option>
+                <option value="marketing">Marketing</option>
+                <option value="engineering">Engineering</option>
+                <option value="finance">Finance</option>
+                <option value="sales">Sales</option>
+                <option value="l&d">L & D</option>
+                <option value="services">Services</option>
+                <option value="product management">Product Management</option>
+                <option value="design">Design</option>
+                <option value="legal">Legal</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="double-input ">
+            <div class="input-container">
+              <label for="start-date">Start Date</label>
+              <input type="text" id="start-date">
+            </div>
+            <div class="input-container">
+              <label for="manager">Manager</label>
+              <input type="text" id="manager">
+            </div>
+          </div>
+
+        <div class="line"></div>
+
+
+        <div class="last-container">
+          <div class="left-container">
+            <button class="submit-button" type="submit" onclick="
+        toRun(event);
+        ">Submit</button> 
+
+        <div class="score-field">Correctly Submitted Fields: 0/0</div> 
+
+          </div>
+          <div class="right-container">
+            <img class="astro" src="../Images/lovepik-cartoon-astronaut-png-image_401525907_wh1200-removebg-preview.png">
+          </div>
+        </div>
+ 
+        
+      </form>
+
+
+      </div>
+    </div>
+
+  </div> 
+
+
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="popup" id="popup">
+    <i class="fa-solid fa-check-circle"></i>
+
+
+    <!-- <i class="fa-solid fa-check-circle blue-tick"></i>
+    <i class="fa-solid fa-circle-xmark "></i> -->
+    <h2 class="popup-heading">Thank You!</h2>
+    <p class="popup-details">The Employee Data has been submitted successfully.</p>
+    <button class="ok-btn">OK</button>
+  </div>
+
+
+
+
+  <div class="error-popup last-name-error" id="error-popup">
+    
+    <!-- <i class="fa-solid fa-circle-xmark "></i>  -->
+    <i class="fa-solid fa-circle-exclamation"></i>
+    <h2 class=" error-popup-heading">Ooops!</h2>
+    <p class="error-popup-details">Last Name can not be empty.</p>
+
+    <div class="button-container">
+      <button class="edit-btn">Edit</button>
+      <button class="continue-btn continue-last-name">Continue</button>
+    </div>
+  </div>
+
+
+
+
+  <div class="error-popup phone-number-error" id="error-popup">
+    
+    <!-- <i class="fa-solid fa-circle-xmark "></i>   -->
+    <i class="fa-solid fa-circle-exclamation"></i>
+    <h2 class=" error-popup-heading">Ooops!</h2>
+    <p class="error-popup-details">Phone Number can not contain alphanumeric.</p>
+
+    <div class="button-container">
+      <button class="edit-btn">Edit</button>
+      <button class="continue-btn continue-phone-number">Continue</button>
+    </div>
+  </div>
+
+
+
+  
+  <div class="error-popup email-error" id="error-popup">
+    
+     <!-- <i class="fa-solid fa-circle-xmark "></i>   -->
+    <i class="fa-solid fa-circle-exclamation"></i>
+    <h2 class=" error-popup-heading">Ooops!</h2>
+    <p class="error-popup-details">Email Address should contain "@".</p>
+
+    <div class="button-container">
+      <button class="edit-btn">Edit</button>
+      <button class="continue-btn continue-email">Continue</button>
+    </div>
+  </div> 
+
+
+
+
+
+
+
+
+
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
