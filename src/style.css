@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -7,25 +6,25 @@
   font-size: 16px;
 }
  body {
-  background-color: rgba(218, 157, 1, 1);
-  padding: 100px 0px; 
-  
+  background-color: #213555;
+  padding-top: 40px ; 
 }
-
 .upper-block {
-  width: 70%;
-  margin: 0px auto 30px auto;
+  width: 90%;
+  margin: 0px auto 50px auto;
   border-radius: 5px;
   padding: 28px 28px 30px 28px;
-  background-color: whitesmoke;
+  color: rgb(205, 205, 205);
+  
 }
-
 .lower-block {
   width: 70%;
   margin: 0px auto;
   border-radius: 5px;
   padding: 28px;
-background-color: whitesmoke;
+  /* background-color: #3B6790; */
+  /* background-color: #23486A; */
+  background-color: #9AA6B2; 
 }
 .astro-image{
   height: 180px;
@@ -33,16 +32,25 @@ background-color: whitesmoke;
   object-fit: contain;
 } 
 .header-image {
-  height: 140px;
+  height: 180px;
   margin: 0;
   object-fit: contain;
 }
-.middle-header-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header-image-container {
+  width: 100%;
+ display: flex;
+ justify-content: space-between;
+ border-radius: 4px;
+}
+.rm-image{
+  height: 250px;
+  width: 400px;
+  position: relative;
 }
 .resource-management{
+  position: absolute;
+  z-index: 10;
+  top: 100px;
   font-family: "Bree Serif", serif;
   font-weight: 400;
   font-style: normal;
@@ -51,19 +59,11 @@ background-color: whitesmoke;
   color: rgba(218, 157, 1, 1);
 }
 
-.header-image-container {
-  width: 100%;
- display: flex;
- justify-content: space-between;
- background-color: #297aad;
- border-radius: 4px;
- margin-bottom: 20px;
-}
 .upper-para{
-  font-size: 16.5px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 28px;
   text-align: justify;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .lower-para{
   display: flex;
@@ -71,40 +71,38 @@ background-color: whitesmoke;
 .lower-left-para, .lower-right-para{
   width: 47%;
   margin-right: 32px;
- 
 }
 .heading-para{
   font-size: 20px;
   margin-bottom: 10px;
+  
 }
 .details p {
-  font-size: 14px;
+  font-size: 15px;
   word-spacing: 2px;
   line-height: 20px;
 }
 .note-para{
-  font-size: 14px;
+  font-size: 15px;
   word-spacing: 2px;
   margin-top: 20px;
 }
 .note{
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
 }
-
 .download-button {
-  background-color:yellowgreen;
+  background-color:#4DA1A9;
   padding: 10px 20px;
   font-weight: 600;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-.download-app-link{
   color: white;
-  text-decoration: none;
 }
-
+.download-button:hover{
+  box-shadow: 0px 0px 8px #7ccbd2;
+}
 .info {
   margin-top: 12px;
   padding-bottom: 20px;
@@ -116,7 +114,7 @@ h1 {
   margin-bottom: 10px;
 }
 .info p{
-  font-size: 17px;
+  font-size: 18px;
   word-spacing: 1px;
   line-height: 19px;
 }
@@ -156,24 +154,25 @@ h1 {
   padding-left: 12px;
   border-radius: 3px;
 }
-
 .line{
   margin-top: 35px;
   margin-bottom: 20px;
   border-bottom: 1px solid rgb(207, 207, 207);
 }
-
 .submit-button {
   margin-top: 15px;
   font-weight: bold;
   border: none;
-  font-size: 18px;
-  background-color:yellowgreen;
+  font-size: 19px;
+  background-color:#4DA1A9;
   color: white;
-  padding: 15px 38px;
+  padding: 18px 38px;
   border-radius: 4px;
   margin-bottom: 20px;
   cursor: pointer;
+}
+.submit-button:hover{
+  box-shadow: 0px 0px 8px #7ccbd2;
 }
 .score-field{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -187,7 +186,17 @@ h1 {
 .astro{
   height: 120px;
 }
-
+footer{
+  margin-top: 100px;
+}
+.footer-container{
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #01264b;
+  color: white;
+  opacity: 0.5;
+}
 .popup{
   width: 315px;
   background-color: whitesmoke;
@@ -205,7 +214,6 @@ h1 {
   transform: translate(-50%, -50%);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .popup-heading{
   margin-bottom: 18px;
   font-size: 30px; 
@@ -218,16 +226,15 @@ h1 {
   width: 100%;
   padding: 10px 0px 10px 0px;
   border: none;
-  background-color: rgba(45, 1, 105, 1);
+  background-color: rgb(225, 110, 129);
   color: white;
   font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
 }
 .popup button:hover{
-  background-color: rgba(62, 11, 133, 0.901);
+  opacity: 0.8;
 }
-
 .overlay {
   display: none; /* Initially hidden */
   position: fixed;
@@ -239,18 +246,12 @@ h1 {
 }
 .fa-check-circle{
   font-size: 60px;
-  color: rgb(45, 1, 105);
+  color: rgb(225, 110, 129);
   position: absolute;
   top: -28px;
   left: 50%;
   transform: translateX(-50%);
 }
-
-
-
-
-
-
 .error-popup{
   width: 315px;
   background-color: whitesmoke;
@@ -267,23 +268,19 @@ h1 {
   transform: translate(-50%, -50%);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-.last-name-error{
+.error-popup{
   display: none;
 }
-.phone-number-error{
-  display: none;
-}
-.email-error{
-  display: none;
-}
-
-.error-popup-heading{
+.error-heading{
   margin-bottom: 18px;
   font-size: 30px; 
 }
-.error-popup-details{
-  color: gray; 
-  margin-bottom: 50px;
+.error-details-container{
+  margin-bottom: 40px;
+}
+.last-name-error, .number-error, .email-error{
+  color: rgb(113, 113, 113); 
+  margin: 6px;
 }
 .button-container{
   display: flex;
@@ -291,24 +288,24 @@ h1 {
 }
 .error-popup button{
   flex: 1;
-  /* width: 100%; */
   padding: 10px 20px 10px 20px;
   border: none;
-  background-color:rgb(232, 126, 51);
+  background-color:rgb(238, 147, 62);
   color: white;
   font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
 }
 .error-popup button:hover{
-  background-color: rgb(129, 176, 34);
+  background-color: rgb(238, 130, 30);
 }
 .fa-circle-exclamation{
   font-size: 60px;
-  color: rgb(232, 126, 51);
+  color: rgb(238, 147, 62);
   position: absolute;
   top: -28px;
   left: 50%;
   transform: translateX(-50%);
 }
+
 

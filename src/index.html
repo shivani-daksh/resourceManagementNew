@@ -24,24 +24,21 @@
     <div class="upper-block">
       <div class="content">
         <div class="header-image-container">
-          <img
-            class="astro-image"
-            src="../Images/pic2-flip-removebg-preview.png"
-            alt="astronaut-image"
-          />
-          <div class="middle-header-content">
+          <div class="logo-image">
             <img
               class="header-image"
               src="../Images/horizontal_on_transparent_by_logaster.png"
               alt="cyb-image"
             />
-            <p class="resource-management">Resource Management</p>
           </div>
-          <img
-            class="astro-image"
-            src="../Images/pic2.webp"
-            alt="astronaut-image"
-          />
+          <div class="rm-image-container">
+            <p class="resource-management">Resource Management</p>
+            <img
+              class="rm-image"
+              src="../Images/empr_230-human_resources-removebg-preview.png"
+              alt="resource-management image"
+            />
+          </div>
         </div>
 
         <div class="details">
@@ -82,20 +79,14 @@
           </div>
         </div>
 
-        <button class="download-button">
-          <a
-            class="download-app-link"
-            href="./files/employee-record Setup 1.0.0.exe"
-            download="./files/employee-record Setup 1.0.0.exe"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Download Legacy App</a
-          >
-        </button>
-
-        <!-- <button class="download-button">
-          <a class="download-app-link" href="./files/LegacyApp-1.0.0-arm64.dmg"  download="./files/LegacyApp-1.0.0-arm64.dmg"   target="_blank" rel="noopener noreferrer">Download Legacy App</a>
-        </button> -->
+        <a
+          class="download-app-link"
+          href="./files/employee-record Setup 1.0.0.exe"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button class="download-button">Download Legacy App</button>
+        </a>
       </div>
     </div>
 
@@ -265,6 +256,10 @@
       </div>
     </div>
 
+    <footer>
+      <div class="footer-container">&copy; 2025 CYB. All Rights Reserved.</div>
+    </footer>
+
     <div class="overlay" id="overlay"></div>
 
     <div class="popup" id="popup">
@@ -279,41 +274,14 @@
       <button class="ok-btn">OK</button>
     </div>
 
-    <div class="error-popup last-name-error" id="error-popup">
+    <div class="error-popup" id="error-popup">
       <!-- <i class="fa-solid fa-circle-xmark "></i>  -->
       <i class="fa-solid fa-circle-exclamation"></i>
-      <h2 class="error-popup-heading">Ooops!</h2>
-      <p class="error-popup-details">Last Name can not be empty.</p>
-
+      <h2 class="error-heading">Ooops!</h2>
+      <div class="error-details-container"></div>
       <div class="button-container">
         <button class="edit-btn">Edit</button>
-        <button class="continue-btn continue-last-name">Continue</button>
-      </div>
-    </div>
-
-    <div class="error-popup phone-number-error" id="error-popup">
-      <!-- <i class="fa-solid fa-circle-xmark "></i>   -->
-      <i class="fa-solid fa-circle-exclamation"></i>
-      <h2 class="error-popup-heading">Ooops!</h2>
-      <p class="error-popup-details">
-        Phone Number can not contain alphanumeric.
-      </p>
-
-      <div class="button-container">
-        <button class="edit-btn">Edit</button>
-        <button class="continue-btn continue-phone-number">Continue</button>
-      </div>
-    </div>
-
-    <div class="error-popup email-error" id="error-popup">
-      <!-- <i class="fa-solid fa-circle-xmark "></i>   -->
-      <i class="fa-solid fa-circle-exclamation"></i>
-      <h2 class="error-popup-heading">Ooops!</h2>
-      <p class="error-popup-details">Email Address should contain "@".</p>
-
-      <div class="button-container">
-        <button class="edit-btn">Edit</button>
-        <button class="continue-btn continue-email">Continue</button>
+        <button class="continue-btn">Continue</button>
       </div>
     </div>
 

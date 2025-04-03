@@ -1,4 +1,3 @@
-
 const employeeIDs = [1012, 1007, 1043, 1029, 1035, 1048]; 
 let usedIDs = []; 
 let rounds = 1;
@@ -25,6 +24,7 @@ function setEmployeeID() {
 
 window.onload = setEmployeeID;
 
+
 function toRun(event) {
   event.preventDefault();
 
@@ -40,22 +40,34 @@ function toRun(event) {
   let startDateInput = document.getElementById("start-date").value;
   let managerInput = document.getElementById("manager").value;
 
+  let errorPopup = document.getElementById("error-popup");
+  let errorContainer = document.querySelector(".error-details-container");
+
+  errorContainer.innerHTML = "";
+  let hasErrors = false;
+
   if (!skipScoreForLastName && !lastNameInput) {
-    document.querySelector(".last-name-error").style.display = "block";
-    document.getElementById("overlay").style.display = "block";
-    return;
+    errorContainer.innerHTML += '<p class="last-name-error">Last name is required.</p>';
+    hasErrors = true;
+    skipScoreForLastName = true;
   }
 
-  if (!skipScoreForPhoneNumber && !/^[\d-]+$/.test(phoneNumberInput)) { // Allows only digits and hyphens
-    document.querySelector(".phone-number-error").style.display = "block";
-    document.getElementById("overlay").style.display = "block";
-    return;
+  if (!skipScoreForPhoneNumber && !/^[\d-]+$/.test(phoneNumberInput)) { 
+    errorContainer.innerHTML += '<p class="number-error">Enter a valid phone number.</p>';
+    hasErrors = true;
+    skipScoreForPhoneNumber = true;
   }
 
   if (!skipScoreForEmail && !emailAddressInput.includes("@")) {
-    document.querySelector(".email-error").style.display = "block";
+    errorContainer.innerHTML += '<p class="email-error">Email must contain "@".</p>';
+    hasErrors = true;
+    skipScoreForEmail = true;
+  }
+
+  if (hasErrors) {
+    errorPopup.style.display = "block";
     document.getElementById("overlay").style.display = "block";
-    return;
+    return;  
   }
 
   let roundScore = 0;
@@ -92,49 +104,30 @@ function toRun(event) {
     registerButton.disabled = true;
     registerButton.style.cursor = "not-allowed";
     registerButton.style.opacity = "0.6";
+    registerButton.style.boxShadow = "none";
   }
 
-
-document.querySelector(".ok-btn").addEventListener("click", function () {
-  document.getElementById("popup").style.display = "none";
-  document.getElementById("overlay").style.display = "none";
-});
-}
-
-
-document.querySelectorAll(".edit-btn").forEach(button => {
-  button.addEventListener("click", function () {
-    document.querySelector(".last-name-error").style.display = "none";
-    document.querySelector(".phone-number-error").style.display = "none";
-    document.querySelector(".email-error").style.display = "none";
+  document.querySelector(".ok-btn").addEventListener("click", function () {
+    document.getElementById("popup").style.display = "none";
     document.getElementById("overlay").style.display = "none";
   });
-});
+}
+
+document.querySelector(".edit-btn").addEventListener("click", function () {
+  document.getElementById("error-popup").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+    skipScoreForLastName = false;
+    skipScoreForPhoneNumber = false;
+    skipScoreForEmail = false;
+  });
 
 
-document.querySelector(".continue-last-name").addEventListener("click", function () {
-  skipScoreForLastName = true;
-  document.querySelector(".last-name-error").style.display = "none";
+document.querySelector(".continue-btn").addEventListener("click", function () {
+  document.getElementById("error-popup").style.display = "none";
   document.getElementById("overlay").style.display = "none";
+
   toRun(new Event("submit")); 
 });
-
-
-document.querySelector(".continue-phone-number").addEventListener("click", function () {
-  skipScoreForPhoneNumber = true;
-  document.querySelector(".phone-number-error").style.display = "none";
-  document.getElementById("overlay").style.display = "none";
-  toRun(new Event("submit")); 
-});
-
-
-document.querySelector(".continue-email").addEventListener("click", function () {
-  skipScoreForEmail = true;
-  document.querySelector(".email-error").style.display = "none";
-  document.getElementById("overlay").style.display = "none";
-  toRun(new Event("submit")); 
-});
-
 
 
 
